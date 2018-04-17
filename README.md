@@ -51,6 +51,11 @@ Checkout release branch 1.0
 # git checkout release-1.0
 ```
 
+Checkout master
+```
+# git checkout master
+```
+
 Change dir to repository
 ```
 # cd openshift-on-openstack-123
