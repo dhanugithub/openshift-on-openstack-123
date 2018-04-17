@@ -58,7 +58,7 @@ Change dir to repository
 
 Configure Parameters
 ```
-# cp sample-vars.yml vars.yml
+# cp sample_vars.yml vars.yml
 ```
 ```
 # vi vars.yml
@@ -181,7 +181,7 @@ Get ip address of the bastion host.
 
 SSH to the bastion host using cloud-user and key.
 ```
-ssh -i /root/admin.pem cloud-user@144.76.134.229
+ssh -i /root/admin.pem cloud-user@144.76.134.228
 ```
 
 ```[Bastion Host]```
