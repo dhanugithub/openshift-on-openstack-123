@@ -10,7 +10,7 @@
     template: "{{ heat_template_path }}"
     parameters:
       domain_name: "{{ domain_name }}"
-      external_network: "{{ external_network }}"
+      public_network: "{{ public_network }}"
       service_subnet_cidr: "{{ service_subnet_cidr }}"
       router_id: "{{ router_id }}"
       ssh_key_name: "{{ ssh_key_name }}"
