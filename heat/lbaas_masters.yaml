@@ -10,7 +10,7 @@ parameters:
     default: 8443
     description: Port used by the load balancer
 
-  external_network:
+  public_network:
     type: string
     description: Network used by the load balancer
     constraints:
@@ -55,7 +55,7 @@ resources:
   floating_ip:
     type: OS::Neutron::FloatingIP
     properties:
-      floating_network: { get_param: external_network }
+      floating_network: { get_param: public_network }
       port_id: { get_attr: [loadbalancer, vip_port_id ]}
 
 outputs:
