@@ -1,10 +1,10 @@
 ---
 ### OpenStack Setting ###
-domain_name: ocp3.lab
-dns_forwarders: [213.133.98.98, 213.133.98.99]
-external_network: public
+domain_name: labor.bisdn.de
+dns_forwarders: [8.8.8.8, 8.8.4.4]
+public_network: public
 service_subnet_cidr: 192.168.1.0/24
-router_id: <router id from 'openstack router list'>
+router_id: ded2bb2a-616d-472c-b7bb-161a9b4736ab
 image: rhel74
 ssh_user: cloud-user
 ssh_key_name: admin
@@ -22,7 +22,7 @@ openshift_user: admin
 openshift_passwd: <password>
 
 ### Red Hat Subscription ###
-rhn_username: <user>
+rhn_username: <username>
 rhn_password: <password>
 rhn_pool: <pool>
 
