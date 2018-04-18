@@ -24,10 +24,10 @@ parameters:
     default: 443
     description: Port used by the servers
 
-  external_network:
+  public_network:
     type: string
     description: >
-      The external network that provides floating IP addresses for the nodes
+      The public network that provides floating IP addresses for the nodes
     constraints:
     - custom_constraint: neutron.network
 
