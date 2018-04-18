@@ -46,6 +46,11 @@ Clone Git Repository
 # git clone https://github.com/dhanugithub/openshift-on-openstack-123
 ```
 
+Change dir to repository
+```
+# cd openshift-on-openstack-123
+```
+
 Checkout release branch 1.0
 ```
 # git checkout release-1.0
@@ -56,11 +61,6 @@ Checkout master
 # git checkout master
 ```
 
-Change dir to repository
-```
-# cd openshift-on-openstack-123
-```
-
 Configure Parameters
 ```
 # cp sample_vars.yml vars.yml
@@ -69,18 +69,18 @@ Configure Parameters
 # vi vars.yml
 ---
 ### OpenStack Setting ###
-domain_name: ocp3.lab
-dns_forwarders: [213.133.98.98, 213.133.98.99]
-external_network: public
+domain_name: berlin.x-ion.de
+dns_forwarders: [8.8.8.8,8.8.4.4]
+public_network: public
 service_subnet_cidr: 192.168.1.0/24
 router_id: <router id from 'openstack router list'>
 image: rhel74
 ssh_user: cloud-user
 ssh_key_name: admin
 stack_name: openshift
-openstack_version: 12
-contact: admin@ocp3.lab
-heat_template_path: /root/openshift-on-openstack-123/heat/openshift.yaml
+openstack_version: 3.15.0
+contact: admin@berlin.x-ion.de
+heat_template_path: /home/dhanashree/openshift-on-openstack-123/heat/openshift.yaml
 
 ### OpenShift Settings ###
 openshift_version: 3.7
