@@ -43,7 +43,7 @@ Multiple Master deployment is 3 Master, 2 Infra node and X number of App nodes. 
 
 Clone Git Repository
 ```
-# git clone https://github.com/ktenzer/openshift-on-openstack-123.git
+# git clone https://github.com/dhanugithub/openshift-on-openstack-123
 ```
 
 Checkout release branch 1.0
