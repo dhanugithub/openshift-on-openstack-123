@@ -32,10 +32,10 @@ parameters:
     type: string
 
   # Connectivity
-  external_network:
+  public_network:
     type: string
     description: >
-      The external network that provides floating IP addresses for the infra nodes
+      The public network that provides floating IP addresses for the infra nodes
     constraints:
     - custom_constraint: neutron.network
 
@@ -111,7 +111,7 @@ resources:
           infras_pool_https: {get_param: infras_pool_https}
           image: {get_param: image}
           flavor: {get_param: infra_flavor}
-          external_network: {get_param: external_network}
+          public_network: {get_param: public_network}
           service_network: {get_param: service_network}
           service_subnet: {get_param: service_subnet}
           security_group: {get_param: security_group}
