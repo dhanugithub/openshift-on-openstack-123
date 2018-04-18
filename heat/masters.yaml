@@ -33,10 +33,10 @@ parameters:
     type: string
 
   # Connectivity
-  external_network:
+  public_network:
     type: string
     description: >
-      The external network that provides floating IP addresses for the masters
+      The public network that provides floating IP addresses for the masters
     constraints:
     - custom_constraint: neutron.network
 
@@ -112,7 +112,7 @@ resources:
           masters_app_port: {get_param: masters_app_port}
           image: {get_param: image}
           flavor: {get_param: master_flavor}
-          external_network: {get_param: external_network}
+          public_network: {get_param: public_network}
           service_network: {get_param: service_network}
           service_subnet: {get_param: service_subnet}
           security_group: {get_param: security_group}
