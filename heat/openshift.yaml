@@ -7,10 +7,10 @@ description:
 
 parameters:
 
-  external_network:
+  public_network:
     type: string
     description: >
-      The external network that provides floating IP addresses for the nodes
+      The public network that provides floating IP addresses for the nodes
     constraints:
     - custom_constraint: neutron.network
 
@@ -162,7 +162,7 @@ resources:
   network:
     type: network.yaml
     properties:
-      external_network: {get_param: external_network}
+      public_network: {get_param: public_network}
       service_subnet_cidr: {get_param:  service_subnet_cidr}
       dns_nameservers: {get_param: dns_forwarders}
       router_id: {get_param: router_id}
@@ -171,21 +171,21 @@ resources:
     depends_on: [network]
     type: lbaas_masters.yaml
     properties:
-      external_network: {get_param: external_network}
+      public_network: {get_param: public_network}
       service_subnet: {get_attr: [network, openshift_subnet]}
     
   lbaas_infras:
     depends_on: [network]
     type: lbaas_infras.yaml
     properties:
-      external_network: {get_param: external_network}
+      public_network: {get_param: public_network}
       service_subnet: {get_attr: [network, openshift_subnet]}
 
   hosts:
     depends_on: [network]
     type: hosts.yaml
     properties:
-      external_network: {get_param: external_network}
+      public_network: {get_param: public_network}
       service_network: {get_attr: [network, openshift_network]}
       service_subnet: {get_attr: [network, openshift_subnet]}
       masters_pool: {get_attr: [lbaas_masters, masters_pool]}
