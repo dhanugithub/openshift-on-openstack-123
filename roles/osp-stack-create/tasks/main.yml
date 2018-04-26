@@ -38,7 +38,7 @@
   register: stack_output_raw
 
 - set_fact:
-    stack_output: "{{ stack_output_raw.stdout|from_json }}"
+   stack_output: "{{ stack_output_raw.stdout|from_json }}"
 
 #- name: Update openshift subnet in inventory file
 #  lineinfile:
