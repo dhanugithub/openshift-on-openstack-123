@@ -37,7 +37,7 @@
     {{ stack_name }} ip_address
   register: stack_output_raw
 
-  set_fact:
+- set_fact:
     stack_output: "{{ stack_output_raw.stdout|from_json }}"
 
 #- name: Update openshift subnet in inventory file
